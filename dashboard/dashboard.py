@@ -3,13 +3,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load cleaned datasets
-day_df = pd.read_csv("D:/submission/dashboard/main_data.csv")
+day_df = pd.read_csv("main_data.csv")
 
 # Convert 'dteday' to datetime for filtering
 day_df['dteday'] = pd.to_datetime(day_df['dteday'])
 
 # Menambahkan logo di sidebar
-logo_path = "D:\submission\dashboard\pngaaa.com-5084798.png"  # Ganti dengan jalur logo Anda
+logo_path = "pngaaa.com-5084798.png"  # Ganti dengan jalur logo Anda
 st.sidebar.image(logo_path, use_column_width=True)
 
 st.title("Dashboard Analisis Penyewaan Sepeda")
@@ -91,5 +91,8 @@ filtered_df.groupby(['mnth', 'yr'])['cnt'].sum().unstack().plot(kind='line', mar
 plt.title('Tren Penyewaan Sepeda')
 plt.xlabel('Bulan')
 plt.ylabel('Jumlah Penyewa Sepeda')
+<<<<<<< HEAD
 plt.xticks(ticks=range(len(filtered_df['mnth'].unique())), labels=['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], rotation=0)  # Memutar label sumbu X horizontal
+=======
+>>>>>>> 12d64d39fecab8283b5c328574fcbb9f155b62a0
 st.pyplot(plt)
