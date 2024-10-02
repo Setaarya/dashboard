@@ -7,8 +7,5 @@ setup(
     author_email='yuliantoseta@gmail.com',
     description='Dashboard',
     packages=find_packages(),
-    install_requires=[
-        'numpy',  # Daftar ketergantungan
-        'pandas',
-    ],
+    install_requires=[requirements.txt],
 )
